@@ -1,0 +1,248 @@
+﻿@{
+    Layout = "~/Views/Shared/_MangaLabLayout.cshtml";
+}
+
+
+
+
+
+<div class="container my-5">
+
+
+
+    <div class="row column-gap-md-3">
+        <div class="col text-white p-3 rounded-1 shadow-lg mt-3" style="background-color:darkred;">
+            <h5 class="text-center text-white fw-light mb-3 boldonse-regular p-2 badge-color rounded-1">Most Favorited Manga</h5>
+
+            <canvas id="topMangaChart" class="chart chart-horizontal-bar"
+                    chart-data="topMangaData"
+                    chart-labels="topMangaLabels"
+                    chart-options="topMangaOptions">
+            </canvas>
+
+        </div>
+        <div class="col text-white p-3 rounded-1 shadow-lg mt-3" style="background-color:darkred;">
+            <h5 class="text-center text-white fw-light mb-3 boldonse-regular p-2 badge-color rounded-1">Most Favorited Genre</h5>
+
+            <canvas id="topGenreChart" class="chart chart-pie"
+                    chart-data="topGenreData"
+                    chart-labels="topGenreLabels"
+                    chart-options="topGenreOptions"
+                    chart-legend="true">
+            </canvas>
+
+        </div>
+        <div class="col text-white p-3 rounded-1 shadow-lg mt-3" style="background-color:darkred;">
+            <h5 class="text-center text-white fw-light mb-3 boldonse-regular p-2 badge-color rounded-1">Most Read Manga</h5>
+
+            <canvas id="topReadChart" class="chart chart-horizontal-bar"
+                    chart-data="topReadData"
+                    chart-labels="topReadLabels"
+                    chart-options="topReadOptions">
+            </canvas>
+
+        </div>
+    </div>
+
+
+    <div class="row column-gap-md-3">
+        <div class="col text-white p-3 rounded-1 mt-3" style="background-color:black;">
+            <h5 class="text-center text-white fw-light mb-3 boldonse-regular p-2 bg-dark rounded-1">New Users</h5>
+
+            <canvas id="line" class="chart chart-line"
+                    chart-data="newUsersData"
+                    chart-labels="newUsersLabels"
+                    chart-series="newUsersSeries"
+                    chart-colors="newUsersColors">
+            </canvas>
+        </div>
+
+        <div class="col text-white p-3 rounded-1 mt-3" style="background-color:black;">
+            <h5 class="text-center text-white fw-light mb-3 boldonse-regular p-2 bg-dark rounded-1">Daily Logins</h5>
+
+            <canvas id="dailyLoginsChart" class="chart chart-bar"
+                    chart-data="dailyLoginData"
+                    chart-labels="dailyLoginLabels"
+                    chart-series="dailyLoginSeries"
+                    chart-colors="dailyLoginColors">
+            </canvas>
+
+        </div>
+    </div>
+
+
+
+    <div class="text-center my-3">
+        <button type="button"
+                class="btn btn-outline-light gradient-hover rounded-pill p-1"
+                ng-click="downloadAnalytics()"
+                ng-disabled="!readyDLButton">
+            <span class="fs-3 fw-semibold mx-4">Download Analytics</span>
+        </button>
+    </div>
+
+
+
+
+    <div class="container w-50 text-center mt-5 p-3 rounded-3" style="background-color:black">
+        <div class="btn-group overflow-hidden custom-toggle-group w-100" role="group" aria-label="Toggle Options">
+
+            <input type="radio" class="btn-check" id="Accounts" name="toggleOption" ng-click="showAccountsView()" checked>
+            <label class="btn btn-outline-dark fs-5 p-2" for="Accounts">
+                <span class="boldonse-regular">Accounts</span>
+            </label>
+
+            <input type="radio" class="btn-check" id="ArchivedAccounts" name="toggleOption" ng-click="showArchivedView()">
+            <label class="btn btn-outline-dark fs-5 p-2" for="ArchivedAccounts">
+                <span class="boldonse-regular">Archived Accounts</span>
+            </label>
+
+            <input type="radio" class="btn-check" id="Logs" name="toggleOption" ng-click="showLogsView()">
+            <label class="btn btn-outline-dark fs-5 p-2" for="Logs">
+                <span class="boldonse-regular">Logs</span>
+            </label>
+
+        </div>
+    </div>
+
+
+    <div class="row mt-5" ng-show="showAccounts" ng-if="tablesReady">
+        <div class="col-12 p-4 rounded shadow text-light " style="background-color:black;">
+            <h5 class="text-center text-light fw-light mb-3 boldonse-regular p-2 rounded-1" style="background-color:darkred;">User Accounts</h5>
+
+            <div class="table-responsive">
+                <table id="activeAccountTable" class="table table-dark table-striped table-hover table-sm rounded-1">
+                    <thead class="text-center">
+                        <tr>
+
+                            <th style="background-color:darkred;">Username</th>
+                            <th style="background-color:darkred;">Email</th>
+                            <th style="background-color:darkred;">Role</th>
+                            <th style="background-color:darkred;">Created At</th>
+                            <th style="background-color:darkred;">Updated At</th>
+                            <th style="background-color:darkred;">Action</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr ng-repeat="item in activeAccountList">
+                            <td>{{item.username}}</td>
+                            <td>{{item.email}}</td>
+                            <td>{{item.roleDescription}}</td>
+                            <td>{{item.createdAt.slice(6, -2) | date: 'MMM-dd-yyyy'}}</td>
+                            <td>{{item.updatedAt.slice(6, -2) | date: 'MMM-dd-yyyy'}}</td>
+                            <td>
+                                <div class="d-flex gap-2">
+                                    <button type="button"
+                                            class="btn btn-outline-light w-100 gradient-hover rounded-pill p-1"
+                                            ng-click="openRoleModal(item)">
+                                        Role
+                                    </button>
+
+                                    <button type="button"
+                                            class="btn btn-outline-light w-100 gradient-hover rounded-pill p-2"
+                                            ng-click="changeStatus(item.registrationID)">
+                                        Archive
+                                    </button>
+                                </div>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+
+    
+
+    <div class="row mt-5" ng-show="showArchived" ng-if="tablesReady">
+        <div class="col-12 p-4 rounded shadow text-light" style="background-color:black;">
+            <h5 class="text-center text-light fw-light mb-3 boldonse-regular p-2 rounded-1" style="background-color:darkred;">Archived Accounts</h5>
+
+            <div class="table-responsive">
+                <table id="archivedAccountTable" class="table table-dark table-striped table-hover table-sm rounded-1">
+                    <thead class="text-center">
+                        <tr>
+
+                            <th style="background-color:darkred;">Username</th>
+                            <th style="background-color:darkred;">Email</th>
+                            <th style="background-color:darkred;">Role</th>
+                            <th style="background-color:darkred;">Created At</th>
+                            <th style="background-color:darkred;">Updated At</th>
+                            <th style="background-color:darkred;">Action</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr ng-repeat="item in archivedAccountList">
+                            <td>{{item.username}}</td>
+                            <td>{{item.email}}</td>
+                            <td>{{item.roleDescription}}</td>
+                            <td>{{item.createdAt.slice(6, -2) | date: 'MMM-dd-yyyy'}}</td>
+                            <td>{{item.updatedAt.slice(6, -2) | date: 'MMM-dd-yyyy'}}</td>
+                            <td class="">
+                                <button type="button" class="btn btn-outline-light gradient-hover rounded-pill p-1 w-75" ng-click="changeStatus(item.registrationID)">
+                                    Unarchive
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="row mt-5" ng-show="showLogs">
+        <div class="col-12 p-4 rounded shadow  text-light" style="background-color:black;">
+            <h5 class="text-center text-light fw-light mb-3 boldonse-regular p-2 rounded-1" style="background-color:darkred;">Logs</h5>
+
+            <div class="table-responsive">
+                <table id="logsTable" class="table table-dark table-striped table-hover table-sm rounded-1">
+                    <thead class="text-center">
+                        <tr>
+
+                            <th style="background-color:darkred;">Username</th>
+                            <th style="background-color:darkred;">Action</th>
+                            <th style="background-color:darkred;">Date</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr ng-repeat="log in logsList">
+                            <td>{{log.username}}</td>
+                            <td>{{log.action}}</td>
+                            <td>{{log.logDate.slice(6, -2) | date: 'MMM-dd-yyyy'}}</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+</div>
+
+
+

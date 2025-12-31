@@ -1,0 +1,481 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\InterDev\\MangaLab\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|c:\\interdev\\mangalab\\mangalab\\models\\tblrolesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\models\\tblrolesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|C:\\InterDev\\MangaLab\\mangalab\\models\\tblregistrationsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\models\\tblregistrationsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|c:\\interdev\\mangalab\\mangalab\\models\\tblprofilepicsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\models\\tblprofilepicsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|c:\\interdev\\mangalab\\mangalab\\models\\tbllogsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\models\\tbllogsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|c:\\interdev\\mangalab\\mangalab\\models\\tblhistorymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\models\\tblhistorymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|c:\\interdev\\mangalab\\mangalab\\models\\tblfavoritesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\models\\tblfavoritesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|C:\\InterDev\\MangaLab\\mangalab\\models\\maps\\tblrolesmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\models\\maps\\tblrolesmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|C:\\InterDev\\MangaLab\\mangalab\\models\\maps\\tblregistrationsmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\models\\maps\\tblregistrationsmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|c:\\interdev\\mangalab\\mangalab\\models\\maps\\tblprofilepicsmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\models\\maps\\tblprofilepicsmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|c:\\interdev\\mangalab\\mangalab\\models\\maps\\tbllogsmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\models\\maps\\tbllogsmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|c:\\interdev\\mangalab\\mangalab\\models\\maps\\tblhistorymap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\models\\maps\\tblhistorymap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|c:\\interdev\\mangalab\\mangalab\\models\\maps\\tblfavoritesmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\models\\maps\\tblfavoritesmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|c:\\interdev\\mangalab\\mangalab\\models\\context\\mangalabcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\models\\context\\mangalabcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|c:\\interdev\\mangalab\\mangalab\\controllers\\mangalabcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\controllers\\mangalabcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|C:\\InterDev\\MangaLab\\mangalab\\scripts\\scriptoflife\\service.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\scripts\\scriptoflife\\service.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|c:\\interdev\\mangalab\\mangalab\\scripts\\scriptoflife\\module.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\scripts\\scriptoflife\\module.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|C:\\InterDev\\MangaLab\\mangalab\\scripts\\scriptoflife\\controller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\scripts\\scriptoflife\\controller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|c:\\interdev\\mangalab\\mangalab\\views\\mangalab\\signinpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\views\\mangalab\\signinpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|c:\\interdev\\mangalab\\mangalab\\views\\mangalab\\searchresultpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\views\\mangalab\\searchresultpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|c:\\interdev\\mangalab\\mangalab\\views\\mangalab\\registerpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\views\\mangalab\\registerpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|c:\\interdev\\mangalab\\mangalab\\views\\mangalab\\readpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\views\\mangalab\\readpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|c:\\interdev\\mangalab\\mangalab\\views\\mangalab\\mangalistpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\views\\mangalab\\mangalistpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|c:\\interdev\\mangalab\\mangalab\\views\\mangalab\\homepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\views\\mangalab\\homepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|c:\\interdev\\mangalab\\mangalab\\views\\mangalab\\administrationpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\views\\mangalab\\administrationpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|C:\\InterDev\\MangaLab\\mangalab\\views\\shared\\_mangalablayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\views\\shared\\_mangalablayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|C:\\InterDev\\MangaLab\\mangalab\\views\\mangalab\\accountpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\views\\mangalab\\accountpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|C:\\InterDev\\MangaLab\\mangalab\\views\\mangalab\\mangapage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD6948A6-92CC-4CE1-AE6D-745D0BC4424D}|MangaLab\\MangaLab.csproj|solutionrelative:mangalab\\views\\mangalab\\mangapage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "tblRolesModel.cs",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Models\\tblRolesModel.cs",
+              "RelativeDocumentMoniker": "MangaLab\\Models\\tblRolesModel.cs",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Models\\tblRolesModel.cs",
+              "RelativeToolTip": "MangaLab\\Models\\tblRolesModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T14:17:32.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "tblProfilepicsModel.cs",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Models\\tblProfilepicsModel.cs",
+              "RelativeDocumentMoniker": "MangaLab\\Models\\tblProfilepicsModel.cs",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Models\\tblProfilepicsModel.cs",
+              "RelativeToolTip": "MangaLab\\Models\\tblProfilepicsModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T14:17:20.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "tblLogsModel.cs",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Models\\tblLogsModel.cs",
+              "RelativeDocumentMoniker": "MangaLab\\Models\\tblLogsModel.cs",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Models\\tblLogsModel.cs",
+              "RelativeToolTip": "MangaLab\\Models\\tblLogsModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T14:17:13.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "tblHistoryModel.cs",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Models\\tblHistoryModel.cs",
+              "RelativeDocumentMoniker": "MangaLab\\Models\\tblHistoryModel.cs",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Models\\tblHistoryModel.cs",
+              "RelativeToolTip": "MangaLab\\Models\\tblHistoryModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T14:17:08.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "tblFavoritesModel.cs",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Models\\tblFavoritesModel.cs",
+              "RelativeDocumentMoniker": "MangaLab\\Models\\tblFavoritesModel.cs",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Models\\tblFavoritesModel.cs",
+              "RelativeToolTip": "MangaLab\\Models\\tblFavoritesModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T14:17:02.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "tblProfilepicsMap.cs",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Models\\Maps\\tblProfilepicsMap.cs",
+              "RelativeDocumentMoniker": "MangaLab\\Models\\Maps\\tblProfilepicsMap.cs",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Models\\Maps\\tblProfilepicsMap.cs",
+              "RelativeToolTip": "MangaLab\\Models\\Maps\\tblProfilepicsMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T14:15:33.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "tblLogsMap.cs",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Models\\Maps\\tblLogsMap.cs",
+              "RelativeDocumentMoniker": "MangaLab\\Models\\Maps\\tblLogsMap.cs",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Models\\Maps\\tblLogsMap.cs",
+              "RelativeToolTip": "MangaLab\\Models\\Maps\\tblLogsMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T14:15:27.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "tblHistoryMap.cs",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Models\\Maps\\tblHistoryMap.cs",
+              "RelativeDocumentMoniker": "MangaLab\\Models\\Maps\\tblHistoryMap.cs",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Models\\Maps\\tblHistoryMap.cs",
+              "RelativeToolTip": "MangaLab\\Models\\Maps\\tblHistoryMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T14:15:18.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "tblFavoritesMap.cs",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Models\\Maps\\tblFavoritesMap.cs",
+              "RelativeDocumentMoniker": "MangaLab\\Models\\Maps\\tblFavoritesMap.cs",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Models\\Maps\\tblFavoritesMap.cs",
+              "RelativeToolTip": "MangaLab\\Models\\Maps\\tblFavoritesMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T14:15:00.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MangaLabContext.cs",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Models\\Context\\MangaLabContext.cs",
+              "RelativeDocumentMoniker": "MangaLab\\Models\\Context\\MangaLabContext.cs",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Models\\Context\\MangaLabContext.cs",
+              "RelativeToolTip": "MangaLab\\Models\\Context\\MangaLabContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T14:14:52.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Module.js",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Scripts\\ScriptOfLife\\Module.js",
+              "RelativeDocumentMoniker": "MangaLab\\Scripts\\ScriptOfLife\\Module.js",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Scripts\\ScriptOfLife\\Module.js",
+              "RelativeToolTip": "MangaLab\\Scripts\\ScriptOfLife\\Module.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-12-18T14:11:53.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "SignInPage.cshtml",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Views\\MangaLab\\SignInPage.cshtml",
+              "RelativeDocumentMoniker": "MangaLab\\Views\\MangaLab\\SignInPage.cshtml",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Views\\MangaLab\\SignInPage.cshtml",
+              "RelativeToolTip": "MangaLab\\Views\\MangaLab\\SignInPage.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-18T14:09:06.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SearchResultPage.cshtml",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Views\\MangaLab\\SearchResultPage.cshtml",
+              "RelativeDocumentMoniker": "MangaLab\\Views\\MangaLab\\SearchResultPage.cshtml",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Views\\MangaLab\\SearchResultPage.cshtml",
+              "RelativeToolTip": "MangaLab\\Views\\MangaLab\\SearchResultPage.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-18T14:08:58.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "RegisterPage.cshtml",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Views\\MangaLab\\RegisterPage.cshtml",
+              "RelativeDocumentMoniker": "MangaLab\\Views\\MangaLab\\RegisterPage.cshtml",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Views\\MangaLab\\RegisterPage.cshtml",
+              "RelativeToolTip": "MangaLab\\Views\\MangaLab\\RegisterPage.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-18T14:07:38.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ReadPage.cshtml",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Views\\MangaLab\\ReadPage.cshtml",
+              "RelativeDocumentMoniker": "MangaLab\\Views\\MangaLab\\ReadPage.cshtml",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Views\\MangaLab\\ReadPage.cshtml",
+              "RelativeToolTip": "MangaLab\\Views\\MangaLab\\ReadPage.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-18T14:06:58.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "MangaListPage.cshtml",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Views\\MangaLab\\MangaListPage.cshtml",
+              "RelativeDocumentMoniker": "MangaLab\\Views\\MangaLab\\MangaListPage.cshtml",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Views\\MangaLab\\MangaListPage.cshtml",
+              "RelativeToolTip": "MangaLab\\Views\\MangaLab\\MangaListPage.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-18T14:06:44.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "HomePage.cshtml",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Views\\MangaLab\\HomePage.cshtml",
+              "RelativeDocumentMoniker": "MangaLab\\Views\\MangaLab\\HomePage.cshtml",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Views\\MangaLab\\HomePage.cshtml",
+              "RelativeToolTip": "MangaLab\\Views\\MangaLab\\HomePage.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-18T14:06:11.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AdministrationPage.cshtml",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Views\\MangaLab\\AdministrationPage.cshtml",
+              "RelativeDocumentMoniker": "MangaLab\\Views\\MangaLab\\AdministrationPage.cshtml",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Views\\MangaLab\\AdministrationPage.cshtml*",
+              "RelativeToolTip": "MangaLab\\Views\\MangaLab\\AdministrationPage.cshtml*",
+              "ViewState": "AgIAAMYAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-18T14:04:46.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "tblRegistrationsMap.cs",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Models\\Maps\\tblRegistrationsMap.cs",
+              "RelativeDocumentMoniker": "MangaLab\\Models\\Maps\\tblRegistrationsMap.cs",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Models\\Maps\\tblRegistrationsMap.cs",
+              "RelativeToolTip": "MangaLab\\Models\\Maps\\tblRegistrationsMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T23:37:42.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "tblRolesMap.cs",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Models\\Maps\\tblRolesMap.cs",
+              "RelativeDocumentMoniker": "MangaLab\\Models\\Maps\\tblRolesMap.cs",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Models\\Maps\\tblRolesMap.cs",
+              "RelativeToolTip": "MangaLab\\Models\\Maps\\tblRolesMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T23:37:31.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "tblRegistrationsModel.cs",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Models\\tblRegistrationsModel.cs",
+              "RelativeDocumentMoniker": "MangaLab\\Models\\tblRegistrationsModel.cs",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Models\\tblRegistrationsModel.cs",
+              "RelativeToolTip": "MangaLab\\Models\\tblRegistrationsModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T23:37:34.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "AccountPage.cshtml",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Views\\MangaLab\\AccountPage.cshtml",
+              "RelativeDocumentMoniker": "MangaLab\\Views\\MangaLab\\AccountPage.cshtml",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Views\\MangaLab\\AccountPage.cshtml",
+              "RelativeToolTip": "MangaLab\\Views\\MangaLab\\AccountPage.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAEEAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-27T01:16:08.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "MangaPage.cshtml",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Views\\MangaLab\\MangaPage.cshtml",
+              "RelativeDocumentMoniker": "MangaLab\\Views\\MangaLab\\MangaPage.cshtml",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Views\\MangaLab\\MangaPage.cshtml",
+              "RelativeToolTip": "MangaLab\\Views\\MangaLab\\MangaPage.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAgwDoAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-25T09:37:20.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "_MangaLabLayout.cshtml",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Views\\Shared\\_MangaLabLayout.cshtml",
+              "RelativeDocumentMoniker": "MangaLab\\Views\\Shared\\_MangaLabLayout.cshtml",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Views\\Shared\\_MangaLabLayout.cshtml",
+              "RelativeToolTip": "MangaLab\\Views\\Shared\\_MangaLabLayout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-24T09:28:19.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Controller.js",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Scripts\\ScriptOfLife\\Controller.js",
+              "RelativeDocumentMoniker": "MangaLab\\Scripts\\ScriptOfLife\\Controller.js",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Scripts\\ScriptOfLife\\Controller.js",
+              "RelativeToolTip": "MangaLab\\Scripts\\ScriptOfLife\\Controller.js",
+              "ViewState": "AgIAAAYGAAAAAAAAAAAgwI0DAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-10T03:06:17.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MangaLabController.cs",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Controllers\\MangaLabController.cs",
+              "RelativeDocumentMoniker": "MangaLab\\Controllers\\MangaLabController.cs",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Controllers\\MangaLabController.cs",
+              "RelativeToolTip": "MangaLab\\Controllers\\MangaLabController.cs",
+              "ViewState": "AgIAAAYGAAAAAAAAAAAywNYBAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T04:12:34.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Service.js",
+              "DocumentMoniker": "C:\\InterDev\\MangaLab\\MangaLab\\Scripts\\ScriptOfLife\\Service.js",
+              "RelativeDocumentMoniker": "MangaLab\\Scripts\\ScriptOfLife\\Service.js",
+              "ToolTip": "C:\\InterDev\\MangaLab\\MangaLab\\Scripts\\ScriptOfLife\\Service.js",
+              "RelativeToolTip": "MangaLab\\Scripts\\ScriptOfLife\\Service.js",
+              "ViewState": "AgIAACYBAAAAAAAAAAAAABUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-11T12:58:45.513Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

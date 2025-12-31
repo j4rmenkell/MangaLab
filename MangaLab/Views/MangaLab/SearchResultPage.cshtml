@@ -1,0 +1,36 @@
+﻿@{
+    Layout = "~/Views/Shared/_MangaLabLayout.cshtml";
+}
+
+<div class="container" ng-controller="MangaLabController" ng-init="initSearch('@ViewBag.SearchQuery')">
+
+    <h1 class="text-white fs-1  fw-lighter my-5">
+        SEARCH RESULT FOR 
+        <span class="fw-bold">
+            "{{ searchQuery | uppercase }}"
+        </span>
+    </h1>
+
+    <div ng-if="isLoading" class="text-center text-white">
+        <h2>Loading...</h2>
+    </div>
+
+    <div ng-if="!isLoading && mangaList.length === 0" class="text-center text-white mt-5">
+        <h2>NO RESULT FOUND.</h2>
+    </div>
+
+    <div ng-if="!isLoading" class="row row-cols-2 row-cols-sm-3 row-cols-md-5 g-3">
+        <div class="col" ng-repeat="manga in mangaList">
+            <a class="text-decoration-none" ng-href="/MangaLab/MangaPage?id={{manga.id}}">
+                <div class="card h-100 bg-transparent border-0">
+                    <div class="image-container manga-card">
+                        <img ng-src="{{ manga.coverUrl }}" class="card-img-top rounded-1 manga-cover" alt="{{ manga.attributes.title.en }}">
+                    </div>
+                    <div class="card-body text-center">
+                        <h6 class="card-title text-white roboto fw-bold manga-title">{{ manga.attributes.title.en }}</h6>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

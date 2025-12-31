@@ -1,0 +1,94 @@
+﻿@{
+    Layout = "~/Views/Shared/_MangaLabLayout.cshtml";
+}
+
+<div class="container p-5">
+    @*TRENDING*@
+    <div class="container">
+        <h1 class="text-white fs-1 boldonse-regular fw-bold my-5 d-inline-block pb-1 border-bottom border-5 border-danger">TRENDING</h1>
+
+        <div id="trendingCarousel" class="carousel slide" data-bs-ride="carousel" ng-init="loadManga()">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <div class="row justify-content-center gx-4 gy-4 row-cols-2 row-cols-sm-3 row-cols-lg-5">
+                        @*Demo*@
+                        <div class="" ng-repeat="manga in mangaList | limitTo: 5">
+                            <a class="text-decoration-none" ng-click="redirectToManga(manga)">
+                                <div class="card h-100 bg-transparent border-0">
+                                    <div class="image-container manga-card">
+                                        <img ng-src="{{ manga.coverUrl }}" class="card-img-top rounded-1 manga-cover" alt="{{ manga.attributes.title.en }}">
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <h6 class="card-title text-white roboto fw-bold manga-title">{{ manga.displayTitle }}</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row justify-content-center gx-4 gy-4 row-cols-2 row-cols-sm-3 row-cols-lg-5">
+                        @*Demo*@
+                        <div class="" ng-repeat="manga in mangaList | limitTo: 5 : 5">
+                            <a class="text-decoration-none" ng-click="redirectToManga(manga)">
+                                <div class="card h-100 bg-transparent border-0">
+                                    <div class="image-container manga-card">
+                                        <img ng-src="{{ manga.coverUrl }}" class="card-img-top rounded-1 manga-cover" alt="{{ manga.attributes.title.en }}">
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <h6 class="card-title text-white roboto fw-bold manga-title">{{ manga.displayTitle }}</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            @*prev*@
+            <button class="left-button carousel-buttons carousel-control-prev d-inline-flex align-items-center justify-content-center shadow" type="button"
+                    data-bs-target="#trendingCarousel"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            @*next*@
+            <button class="right-button carousel-buttons carousel-control-next d-inline-flex align-items-center justify-content-center shadow" type="button"
+                    data-bs-target="#trendingCarousel"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    @*RECENTLY ADDED*@
+    <div class="container" ng-init="loadRecentlyAdded()">
+        <h1 class="text-white fs-1 boldonse-regular fw-bold my-5 d-inline-block pb-1 border-bottom border-5 border-danger">RECENTLY ADDED</h1>
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-5 g-3">
+            <div class="col" ng-repeat="manga in recentlyAddedList">
+                <a href="#" class="text-decoration-none" ng-click="redirectToManga(manga)">
+                    <div class="card h-100 bg-transparent border-0">
+                        <div class="image-container manga-card">
+                            <img ng-src="{{ manga.coverUrl }}" class="card-img-top rounded-1 manga-cover" alt="{{ manga.attributes.title.en }}">
+                        </div>
+                        <div class="card-body text-center">
+                            <h6 class="card-title text-white roboto fw-bold manga-title">{{ manga.displayTitle }}</h6>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <button type="button" class="btn btn-outline-danger gradient-hover rounded-pill p-1" ng-click="redirectToMangaList()">
+            <span class="fs-5 mx-4">View More</span>
+        </button>
+    </div>
+
+</div>
+
+
+
+

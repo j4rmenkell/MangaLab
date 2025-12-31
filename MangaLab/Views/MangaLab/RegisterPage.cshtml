@@ -1,0 +1,182 @@
+﻿@{
+    Layout = "~/Views/Shared/_MangaLabLayout.cshtml";
+}
+
+
+<div class="container-fluid d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="w-50 p-5">
+        <div class=" row shadow-lg">
+            <div class="black-bg col p-5 text-center p-5">
+                <h1 class="text-white manga-title fs-1 boldonse-regular fw-bold mt-5 mb-2">SIGN UP</h1>
+
+                <div class="d-flex justify-content-center p-5">
+                    <form name="signUp" ng-submit="addUser()" novalidate class="w-75">
+                        @* Username *@
+                        <div class="form-floating mb-3">
+                            <input type="text"
+                                   class="form-control-lg form-control"
+                                   id="username"
+                                   name="username"
+                                   placeholder="Username"
+                                   ng-model="user.username"
+                                   ng-required="true"
+                                   ng-minlength="3"
+                                   ng-maxlength="20"
+                                   maxlength="20">
+                            <label for="username" class="fw-semibold">
+                                Username <span class="text-danger">*</span>
+                            </label>
+                        </div>
+
+
+                        @* Username Validation *@
+                        <div class="text-danger text-start mb-3 fs-5">
+                            <small ng-show="signUp.username.$touched && signUp.username.$error.required">
+                                Username is required.
+                            </small>
+                            <small ng-show="signUp.username.$touched && signUp.username.$error.minlength">
+                                At least 3 characters (maximum 20 characters)
+                            </small>
+                            <small ng-show="signUp.username.$touched && signUp.username.$error.maxlength">
+                                Maximum 20 characters only.
+                            </small>
+                            <small ng-show="!signUp.username.$invalid && usernameChecker">
+                                This Username already exists.
+                            </small>
+                        </div>
+
+
+                        @*Email*@
+                        <div class="form-floating mb-3">
+                            <input type="email"
+                                   class="form-control-lg form-control"
+                                   id="email"
+                                   name="email"
+                                   placeholder="Email"
+                                   ng-model="user.email"
+                                   ng-required="true"
+                                   ng-pattern="email"
+                                   maxlength="128">
+                            <label for="email" class="fw-semibold">
+                                Email <span class="text-danger">*</span>
+                            </label>
+                        </div>
+
+                        @*Email Validation*@
+                        <div class="text-danger text-start mb-3 fs-5">
+                            <small ng-show="signUp.email.$touched && signUp.email.$error.required">
+                                Email is required.
+                            </small>
+                            <small ng-show="signUp.email.$touched && signUp.email.$error.pattern">
+                                Invalid email format. Example: user@example.com (maximum 128 characters)
+                            </small>
+                            <small ng-show="!signUp.email.$invalid && emailChecker">
+                                This Email already exists.
+                            </small>
+                        </div>
+
+                        @* Password *@
+                        <div class="form-floating mb-3 position-relative">
+                            <input ng-attr-type="{{ showPassword ? 'text' : 'password' }}"
+                                   class="form-control form-control-lg pe-5"
+                                   id="password"
+                                   name="password"
+                                   placeholder="Password"
+                                   ng-model="user.password"
+                                   ng-required="true"
+                                   ng-pattern="password"
+                                   maxlength="64">
+                            <label class="fw-semibold" for="password">
+                                Password <span class="text-danger">*</span>
+                            </label>
+                            <i class="bi position-absolute top-50 end-0 translate-middle-y me-3"
+                               ng-class="showPassword ? 'bi-eye-slash' : 'bi-eye'"
+                               style="cursor: pointer;"
+                               ng-click="toggle('showPassword')"></i>
+                        </div>
+
+
+                        <div class="text-danger text-start mb-3 fs-5"
+                             ng-show="signUp.password.$touched && signUp.password.$invalid">
+                            <small ng-show="signUp.password.$error.required">
+                                Password is required.
+                            </small>
+                            <small ng-show="signUp.password.$error.pattern">
+                                Must be at least 8 characters, with uppercase, lowercase, number, and special symbol (maximum 64 characters)
+                            </small>
+                        </div>
+
+                        @* Confirm Password *@
+                        <div class="form-floating mb-3 position-relative">
+                            <input ng-attr-type="{{ showConfirm ? 'text' : 'password' }}"
+                                   id="confirmPassword"
+                                   name="confirmPassword"
+                                   class="form-control form-control-lg pe-5"
+                                   ng-model="user.confirmPassword"
+                                   ng-required="true"
+                                   maxlength="64">
+                            <label class="fw-semibold" for="confirmPassword">
+                                Confirm Password <span class="text-danger">*</span>
+                            </label>
+                            <i class="bi position-absolute top-50 end-0 translate-middle-y me-3"
+                               ng-class="showConfirm ? 'bi-eye-slash' : 'bi-eye'"
+                               style="cursor: pointer;"
+                               ng-click="toggle('showConfirm')"></i>
+                        </div>
+
+
+                        <div class="text-danger text-start mb-3 fs-5"
+                             ng-show="signUp.confirmPassword.$touched && user.confirmPassword !== user.password">
+                            <small>Passwords do not match.</small>
+                        </div>
+
+
+                        <button type="submit"
+                                class="btn btn-outline-danger gradient-hover rounded-pill p-2 w-100 fs-5 my-5"
+                                ng-disabled="signUp.$invalid || user.confirmPassword !== user.password || isSubmitting">
+                            
+                                <span ng-if="!isSubmitting">Sign Up</span>
+                                <span ng-if="isSubmitting">
+
+                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                    Signing Up...
+                                </span>
+
+                        </button>
+
+                        <span class="text-light">Already have an account? <a class="roboto text-danger manga-title" style="cursor: pointer;" ng-click="redirectToSignIn()">Sign In</a></span>
+
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@*Machine Problem 3*@
+<!--<div class="d-flex justify-content-center align-items-center p-5">
+    <table class="table table-dark table-hover w-50">
+        <thead>
+            <tr>
+                <th scope="col">Username</th>
+                <th scope="col">Email</th>
+                <th scope="col">Password</th>
+                <th scope="col">Confirm Password</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="newUser in users">
+                <td>{{newUser.username}}</td>
+                <td>{{newUser.email}}</td>
+                <td>{{newUser.password}}</td>
+                <td>{{newUser.confirmPassword}}</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>-->
+
+

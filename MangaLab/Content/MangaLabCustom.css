@@ -1,0 +1,230 @@
+﻿html, body {
+    background-image: linear-gradient(black, red, black);
+    margin: 0;
+    padding: 0;
+    
+    min-height: 100vh;
+}
+
+
+.footer-bg, .navbar-bg {
+    background-color: black;
+}
+
+footer {
+    margin-top: auto; 
+}
+
+.badge-color {
+    background-color: #ab001f !important;
+}
+
+.rating {
+    background-color: rgba(33, 37, 41, 0.8);
+}
+
+.rating-icons {
+    color:darkred;
+}
+
+
+.underline-red {
+    text-decoration-color: red;
+}
+
+.carousel-buttons {
+    margin-top: 10rem;
+    background-color: darkred !important; 
+    border-color: darkred !important; 
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important; 
+    
+}
+
+.page-link:hover {
+    background-color: #444 !important;
+    color: #fff !important;
+}
+
+
+.last-button {
+    background-color: #8B0000 !important; 
+}
+
+
+.last-button:hover {
+    background-color: #5c0000 !important; 
+    color: #fff !important;
+}
+
+
+
+.left-button {
+    margin-left: -2rem;
+}
+.right-button {
+    margin-right: -2rem;
+}
+
+.dropbutton {
+    background-color: black !important;
+    background-image: none !important; 
+    color: white !important; 
+}
+
+.paginationbg {
+    background-color: black !important;
+}
+
+.manga-cover {
+    width: 100%;
+    height: 350px; 
+    object-fit: cover; 
+    border-radius: 0.25rem; 
+}
+
+.manga-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.manga-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.manga-title {
+    transition: color 0.2s;
+}
+
+.manga-title:hover {
+    color: #ab001f !important; 
+}
+
+.gradient-hover {
+  transition: all 0.3s ease;
+}
+
+.gradient-hover:hover {
+  background: linear-gradient(90deg, #ab001f, #2b0008);
+  color: white !important; 
+  border-color: #ab001f !important; 
+}
+
+.boldonse-regular {
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.chapter-scroll {
+    max-height: 200px; 
+    overflow-y: auto; 
+}
+
+.manga-page {
+    max-width: 200px;
+    max-height: 300px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.chapter-buttons {
+    width: 50px;
+    height: 50px;
+}
+
+.black-bg {
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+
+.custom-input {
+    background-color: transparent !important;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    border-radius: 0;
+    box-shadow: none;
+    color: #fff; 
+    transition: border-color 0.3s;
+}
+
+.custom-input::placeholder {
+    color: #aaa; 
+    opacity: 1;
+}
+
+.custom-input:focus {
+    border-bottom: 2px solid #007bff;
+    outline: none;
+    box-shadow: none;
+}
+
+.profile-pic {
+    object-fit: cover;
+}
+
+.edit-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.edit-btn:hover {
+    background-color: #007bff;
+    color: white;
+    transform: scale(1.1);
+}
+
+
+
+
+.custom-toggle-group .btn-outline-dark {
+    background-color: black; 
+    color: #fff; 
+    font-weight: bold;
+    
+}
+
+.custom-toggle-group .btn-check:not(:checked) + .btn-outline-dark:hover {
+    background-color: #e2e6ea; 
+    color: black;
+    border-color: transparent;
+}
+
+
+.custom-toggle-group .btn-check:checked + .btn-outline-dark {
+    background-color: darkred; 
+    color: #fff; 
+    border-color: #0d1e3a; 
+    box-shadow: none; 
+}
+
+.custom-toggle-group .btn:focus {
+    box-shadow: none;
+}
+
+
+
+
+
+
+

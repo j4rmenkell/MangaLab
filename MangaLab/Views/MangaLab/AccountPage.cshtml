@@ -1,0 +1,417 @@
+﻿@{
+    Layout = "~/Views/Shared/_MangaLabLayout.cshtml";
+}
+
+<div class="container my-5">
+
+    
+
+    @*Profile Picture*@
+    <div class="container text-center mt-5">
+        <div class="position-relative d-inline-block">
+
+            <img ng-src="{{ userpic }}"
+                 class="rounded-circle shadow-lg profile-pic"
+                 alt="Profile Picture"
+                 width="250"
+                 height="250">
+
+            <input type="file"
+                   id="profilePicInput"
+                   accept="image/png, image/jpeg"
+                   style="display: none;">
+
+            <button type="button"
+                    class="btn fs-4 btn-dark rounded-circle shadow edit-btn"
+                    onclick="document.getElementById('profilePicInput').click()"
+                    ng-show="showEdit && showEditUsername"
+                    style="background-color:black;">
+                <i class="bi bi-pencil-fill"></i>
+            </button>
+
+        </div>
+    </div>
+
+
+    <div class="container w-50 text-center my-3 p-3 rounded-3  " style="background-color:black" ng-show="showEdit">
+        <div class="btn-group overflow-hidden custom-toggle-group w-100" role="group" aria-label="Toggle Options">
+            <input type="radio" class="btn-check" name="toggleOption" id="Account" autocomplete="off" checked ng-click="toggleEditUsername()">
+            <label class="btn btn-outline-dark fs-5 p-2" for="Account">
+                <span class="boldonse-regular">Account</span>
+            </label>
+
+            <input type="radio" class="btn-check" name="toggleOption" id="Security" autocomplete="off">
+            <label class="btn btn-outline-dark  fs-5 p-2" for="Security" ng-click="toggleEditSecurity()">
+                <span class="boldonse-regular">Security</span>
+            </label>
+
+        </div>
+    </div>
+
+    <h1 class="text-white text-center fs-3 boldonse-regular fw-bold mt-3 mb-2" ng-show="!showEdit">
+        @Session["username"]
+    </h1>
+    <form ng-show="showEdit && showEditUsername" name="editProfileForm">
+        <div class="my-3 d-flex flex-column justify-content-center align-items-center">
+            <div class="form-group w-25 position-relative">
+                <input type="text"
+                       id="username"
+                       name="username"
+                       class="form-control text-light fs-3 text-center border-0 border-bottom rounded-0 shadow-none custom-input"
+                       placeholder="Username"
+                       ng-minlength="3"
+                       ng-maxlength="20"
+                       maxlength="20"
+                       ng-model="accountUser.username"
+                       ng-init="accountUser.username = '@Session["username"]'"
+                       ng-change="resetUsernameError()"
+                       ng-required="true">
+            </div>
+
+            <div class="text-danger text-start mb-3 fs-5 mt-2">
+                <small ng-show="editProfileForm.username.$touched && editProfileForm.username.$error.required">
+                    Username is required.
+                </small>
+
+                <small ng-show="editProfileForm.username.$touched && editProfileForm.username.$error.minlength">
+                    Username must be at least 3 characters.
+                </small>
+
+                <small ng-show="!editProfileForm.username.$invalid && changeUsernameChecker">
+                    This Username already exists.
+                </small>
+            </div>
+        </div>
+    </form>
+
+
+
+
+
+
+
+    <div class="row mt-5 column-gap-md-3" ng-show="showEdit && !showEditUsername">
+        <div class="col p-3 rounded-3 text-center" style="background-color:black;">
+            <h5 class="text-center text-white fw-bold mb-3 roboto p-2 badge-color rounded-1">CHANGE EMAIL</h5>
+
+            <form name="changeEmailForm" ng-submit="updateEmail()" novalidate>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control"
+                           id="email"
+                           name="email"
+                           placeholder="New Email"
+                           ng-model="sec.email.newEmail"
+                           ng-required="true"
+                           ng-pattern="email"
+                           maxlength="128"
+                           autocomplete="new-password">
+                    <label for="email" class="fw-semibold">
+                        New Email <span class="text-danger">*</span>
+                    </label>
+                </div>
+                <div class="text-danger text-start mb-3 fs-5">
+                    <small ng-show="changeEmailForm.email.$touched && changeEmailForm.email.$error.required">
+                        New email is required.
+                    </small>
+                    <small ng-show="changeEmailForm.email.$touched && changeEmailForm.email.$error.pattern">
+                        Invalid email format. Example: user@example.com (maximum 128 characters)
+                    </small>
+                    <small ng-show="!changeEmailForm.email.$invalid && emailChecker">
+                        This Email already exists.
+                    </small>
+                </div>
+
+                <div class="form-floating mb-3 position-relative">
+                    <input ng-attr-type="{{ showEmailPw ? 'text' : 'password' }}"
+                           class="form-control pe-5"
+                           id="emailCurrentPassword"
+                           name="emailCurrentPassword"
+                           placeholder="Current Password"
+                           ng-model="sec.email.currentPassword"
+                           ng-required="true">
+                    <label class="fw-semibold" for="emailCurrentPassword">
+                        Current Password <span class="text-danger">*</span>
+                    </label>
+                    <i class="bi position-absolute top-50 end-0 translate-middle-y me-3"
+                       ng-class="showEmailPass ? 'bi-eye-slash' : 'bi-eye'"
+                       style="cursor: pointer;"
+                       ng-click="toggle('showEmailPw')"></i>
+                </div>
+
+                <div ng-if="emailSuccess" class="alert alert-success my-3" role="alert">
+                    {{ emailSuccess }}
+                </div>
+
+                <div ng-if="emailError" class="alert alert-danger my-3" role="alert">
+                    {{ emailError }}
+                </div>
+
+
+
+                <button type="submit"
+                        class="btn btn-outline-light gradient-hover rounded-pill p-2 w-50"
+                        ng-disabled="changeEmailForm.$invalid || isEmailUpdating">
+
+                    <span ng-if="!isEmailUpdating">Update Email</span>
+                    <span ng-if="isEmailUpdating">
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        Updating...
+                    </span>
+                </button>
+
+            </form>
+
+
+        </div>
+
+        <div class="col p-3 rounded-3 text-center shadow-lg" style="background-color:black;">
+            <h5 class="text-center text-white fw-bold mb-3 roboto p-2 badge-color rounded-1">CHANGE PASSWORD</h5>
+
+            <form name="changePasswordForm" ng-submit="updatePassword()" novalidate>
+
+                <div class="form-floating mb-3 position-relative">
+                    <input ng-attr-type="{{ showCurrentPw ? 'text' : 'password' }}"
+                           class="form-control pe-5"
+                           id="currentPassword"
+                           name="currentPassword"
+                           placeholder="Current Password"
+                           ng-model="sec.pw.currentPassword"
+                           ng-required="true">
+                    <label class="fw-semibold" for="currentPassword">
+                        Current Password <span class="text-danger">*</span>
+                    </label>
+                    <i class="bi position-absolute top-50 end-0 translate-middle-y me-3"
+                       ng-class="showCurrentPass ? 'bi-eye-slash' : 'bi-eye'"
+                       style="cursor: pointer;"
+                       ng-click="toggle('showCurrentPw')"></i>
+                </div>
+
+                <div class="text-danger text-start mb-3" ng-show="changePasswordForm.currentPassword.$touched && changePasswordForm.currentPassword.$error.required">
+                    <small>Current password is required.</small>
+                </div>
+
+                <div class="form-floating mb-3 position-relative">
+                    <input ng-attr-type="{{ showNewPw ? 'text' : 'password' }}"
+                           class="form-control pe-5"
+                           id="newPassword"
+                           name="newPassword"
+                           placeholder="New Password"
+                           ng-model="sec.pw.newPassword"
+                           ng-required="true"
+                           ng-pattern="password"
+                           maxlength="64">
+                    <label class="fw-semibold" for="newPassword">
+                        New Password <span class="text-danger">*</span>
+                    </label>
+                    <i class="bi position-absolute top-50 end-0 translate-middle-y me-3"
+                       ng-class="showNewPass ? 'bi-eye-slash' : 'bi-eye'"
+                       style="cursor: pointer;"
+                       ng-click="toggle('showNewPw')"></i>
+                </div>
+
+                <div class="text-danger text-start mb-3 fs-5"
+                     ng-show="changePasswordForm.newPassword.$touched && changePasswordForm.newPassword.$invalid">
+                    <small ng-show="changePasswordForm.newPassword.$error.required">
+                        New password is required.
+                    </small>
+                    <small ng-show="changePasswordForm.newPassword.$error.pattern">
+                        Must be at least 8 characters, with uppercase, lowercase, number, and special symbol (maximum 64 characters)
+                    </small>
+                </div>
+
+                <div class="form-floating mb-3 position-relative">
+                    <input ng-attr-type="{{ showConfirmPw ? 'text' : 'password' }}"
+                           id="confirmNewPassword"
+                           name="confirmNewPassword"
+                           class="form-control pe-5"
+                           ng-model="sec.pw.confirmNewPassword"
+                           ng-required="true"
+                           maxlength="64">
+                    <label class="fw-semibold" for="confirmNewPassword">
+                        Confirm New Password <span class="text-danger">*</span>
+                    </label>
+                    <i class="bi position-absolute top-50 end-0 translate-middle-y me-3"
+                       ng-class="showConfirmPass ? 'bi-eye-slash' : 'bi-eye'"
+                       style="cursor: pointer;"
+                       ng-click="toggle('showConfirmPw')"></i>
+                </div>
+
+                <div class="text-danger text-start mb-3 fs-5"
+                     ng-show="changePasswordForm.confirmNewPassword.$touched && sec.pw.confirmNewPassword !== sec.pw.newPassword">
+                    <small>Passwords do not match.</small>
+                </div>
+
+                <span class="text-danger my-2">{{ passwordMessage }}</span>
+
+
+                <div ng-if="passwordSuccess" class="alert alert-success my-3" role="alert">
+                    {{ passwordSuccess }}
+                </div>
+
+                <div ng-If="passwordError" class="alert alert-danger my-3" role="alert">
+                    {{ passwordError }}
+                </div>
+
+
+                <button type="submit"
+                        class="btn btn-outline-light gradient-hover rounded-pill p-2 w-50"
+                        ng-disabled="changePasswordForm.$invalid || sec.pw.confirmNewPassword !== sec.pw.newPassword || isPasswordUpdating">
+
+                    <span ng-if="!isPasswordUpdating">Update Password</span>
+                    <span ng-if="isPasswordUpdating">
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        Updating...
+                    </span>
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+
+
+    <div class="text-center mt-3">
+        <button type="button" class="btn btn-outline-light gradient-hover rounded-pill p-1" ng-click="editUser()" ng-show="!showEdit">
+            <span class="fs-5 fw-semibold mx-4">Edit Profile</span>
+        </button>
+    </div>
+
+    <div class="d-flex justify-content-center gap-3 mt-3" ng-show="showEdit">
+        <button type="button" class="btn btn-danger text-white rounded-pill p-1" style="background-color: #ab001f;" ng-click="saveEdit()" ng-show="showEdit && showEditUsername">
+            <span class="fs-5 fw-semibold mx-4">
+                Save
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-square ms-1 fw-bold" viewBox="0 0 16 16">
+                    <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z" />
+                    <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0" />
+                </svg>
+            </span>
+        </button>
+        <button type="button" class="btn btn-dark rounded-pill p-1" ng-click="cancelEdit()">
+            <span class="fs-5 fw-semibold mx-4">
+                Cancel
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square ms-1 fw-bold" viewBox="0 0 16 16">
+                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                </svg>
+            </span>
+        </button>
+    </div>
+
+
+
+
+
+    <div class="row mt-5 column-gap-md-3">
+        <div class="col text-white p-3 rounded-3" style="background-color:black;">
+            <h5 class="text-center text-white fw-bold mb-3 boldonse-regular p-2 badge-color rounded-1">FAVORITE GENRE</h5>
+            <h5 class="text-center roboto fw-bold fs-2 text-uppercase">{{ favoriteGenre }}</h5>
+        </div>
+        <div class="col text-white p-3 rounded-3" style="background-color:black;">
+            <h5 class="text-center text-white fw-bold mb-3 boldonse-regular p-2 badge-color rounded-1">TOTAL MANGAS READ</h5>
+            <h5 class="text-center roboto fw-bold fs-2">{{ totalMangasRead }}</h5>
+        </div>
+        <div class="col text-white p-3 rounded-3" style="background-color:black;">
+            <h5 class="text-center text-white fw-bold mb-3 boldonse-regular p-2 badge-color rounded-1">ACCOUNT AGE</h5>
+            <h5 class="text-center roboto fw-bold fs-2 text-uppercase">{{ accountAge }}</h5>
+        </div>
+    </div>
+
+    <div class="row mt-5" ng-init="loadFavorites()">
+        <div class="col text-white p-3 rounded-3" style="background-color:black;">
+            <h5 class="text-center text-white fw-bold mb-3 boldonse-regular p-2 badge-color rounded-1">FAVORITES</h5>
+
+            <div class="row g-4 flex-nowrap overflow-x-auto">
+
+                <div class="col-6 col-md-2 position-relative" ng-repeat="item in favoriteManga">
+
+                    <button class="btn btn-dark rounded-circle position-absolute top-0 end-0 border-0 p-0 d-flex justify-content-center align-items-center me-3 mt-2"
+                            ng-click="archiveFavoriteItem(item)"
+                            style="width: 1.5rem; height: 1.5rem; z-index: 10;">
+                        <i class="bi bi-x-lg fs-6"></i>
+                    </button>
+
+                    <a class="text-decoration-none" ng-click="redirectToManga(item.manga)">
+                        <div class="card h-100 bg-transparent border-0">
+                            <div class="image-container manga-card">
+                                <img ng-src="{{getCoverUrl(item.manga)}}" class="card-img-top rounded-1 manga-cover">
+                            </div>
+                            <div class="card-body text-center">
+                                <span class="card-title text-white roboto fw-bold manga-title">{{ getDisplayTitle(item.manga) }}</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div ng-if="!favoriteManga.length" class="text-white text-center mt-4 mb-3">
+                <h4>No Favorite Manga</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col text-white p-3 rounded-3" style="background-color:black;">
+            <h5 class="text-center text-white fw-bold mb-3 boldonse-regular p-2 badge-color rounded-1">CONTINUE READING</h5>
+            <div class="row g-4 flex-nowrap overflow-x-auto">
+
+                <div class="col-6 col-md-2 position-relative" ng-repeat="item in continueReading">
+
+                    <button class="btn btn-dark rounded-circle position-absolute top-0 end-0 border-0 p-0 d-flex justify-content-center align-items-center me-3 mt-2"
+                            ng-click="archiveHistoryItem(item)"
+                            style="width: 1.5rem; height: 1.5rem; z-index: 10;">
+                        <i class="bi bi-x-lg fs-6"></i>
+                    </button>
+
+
+
+                    <a class="text-decoration-none" ng-click="redirectToContinueReading(item)">
+                        <div class="card h-100 bg-transparent border-0">
+                            <div class="image-container manga-card">
+                                <img ng-src="{{getCoverUrl(item.manga)}}" class="card-img-top rounded-1 manga-cover">
+                            </div>
+                            <div class="card-body text-center">
+                                <span class="card-title text-white roboto fw-bold manga-title">{{ getDisplayTitle(item.manga) }}</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div ng-if="!continueReading.length" class="text-white text-center mt-4 mb-3">
+                <h4>No Recently Read Manga</h4>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row mt-5">
+        <div class="col text-white p-3 rounded-3" style="background-color:black;">
+            <h5 class="text-center text-white fw-bold mb-3 boldonse-regular p-2 badge-color rounded-1">RECOMMENDED</h5>
+
+            <div class="row g-4 flex-nowrap overflow-x-auto">
+
+                <div class="col-6 col-md-2" ng-repeat="manga in recommendedManga">
+
+
+                    <a class="text-decoration-none" ng-click="redirectToManga(manga)">
+                        <div class="card h-100 bg-transparent border-0">
+                            <div class="image-container manga-card">
+                                <img ng-src="{{getCoverUrl(manga)}}" class="card-img-top rounded-1 manga-cover">
+                            </div>
+                            <div class="card-body text-center">
+                                <span class="card-title text-white roboto fw-bold manga-title">{{ getDisplayTitle(manga) }}</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            <div ng-if="!recommendedManga.length" class="text-white text-center mt-4 mb-3">
+                <h4>No recommendations found.</h4>
+            </div>
+
+        </div>
+    </div>
+
+</div>

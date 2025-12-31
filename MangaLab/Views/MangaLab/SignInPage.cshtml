@@ -1,0 +1,97 @@
+﻿@{
+    Layout = "~/Views/Shared/_MangaLabLayout.cshtml";
+}
+
+<div class="container-fluid d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="w-50 p-5">
+        <div class="row shadow-lg">
+            <div class="black-bg col p-5 text-center">
+                <h1 class="text-white manga-title fs-1 boldonse-regular fw-bold mt-5 mb-2">SIGN IN</h1>
+
+                <div class="d-flex justify-content-center p-5">
+                    <form name="signIn" ng-submit="loginUser()" novalidate class="w-75">
+                        @* Username or Email *@
+                        <div class="form-floating mb-3">
+                            <input type="text"
+                                   class="form-control-lg form-control"
+                                   id="loginUser"
+                                   name="user"
+                                   placeholder="Username or Email"
+                                   ng-model="loginData.User"
+                                   ng-required="true"
+                                   ng-minlength="3"
+                                   ng-maxlength="50"
+                                   maxlength="50">
+                            <label for="loginUser" class="fw-semibold">
+                                Username or Email <span class="text-danger">*</span>
+                            </label>
+                        </div>
+
+                        @* Username/Email Field Validation *@
+                        <div class="text-danger text-start mb-3 fs-6">
+                            <small ng-show="signIn.user.$touched && signIn.user.$error.required">
+                                Username or Email is required.
+                            </small>
+                            <small ng-show="signIn.user.$touched && signIn.user.$error.minlength">
+                                At least 3 characters.
+                            </small>
+                            <small ng-show="signIn.user.$touched && signIn.user.$error.maxlength">
+                                Maximum 50 characters only.
+                            </small>
+                        </div>
+
+                        @* Password *@
+                        <div class="form-floating mb-3 position-relative">
+                            <input ng-attr-type="{{ showPassword ? 'text' : 'password' }}"
+                                   class="form-control form-control-lg pe-5"
+                                   id="loginPassword"
+                                   name="password"
+                                   placeholder="Password"
+                                   ng-model="loginData.Password"
+                                   ng-required="true"
+                                   maxlength="64">
+                            <label class="fw-semibold" for="loginPassword">
+                                Password <span class="text-danger">*</span>
+                            </label>
+                            <i class="bi position-absolute top-50 end-0 translate-middle-y me-3"
+                               ng-class="showPassword ? 'bi-eye-slash' : 'bi-eye'"
+                               style="cursor: pointer;"
+                               ng-click="toggle('showPassword')"></i>
+                        </div>
+
+                        @* Password Field Validation *@
+                        <div class="text-danger text-start mb-3 fs-6">
+                            <small ng-show="signIn.password.$touched && signIn.password.$error.required">
+                                Password is required.
+                            </small>
+                        </div>
+
+                        @* General Login Error (from Server) *@
+                        <div class="text-danger text-start mb-3 fs-6">
+                            <small ng-show="loginError">
+                                {{ loginError }}
+                            </small>
+                        </div>
+
+                        <button type="submit" class="btn btn-outline-danger gradient-hover rounded-pill p-2 w-100 fs-5 my-5"
+                                ng-disabled="signIn.$invalid || isSubmitting">
+                            
+                            <span ng-if="!isSubmitting">Sign In</span>
+                            <span ng-if="isSubmitting">
+                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                Signing In...
+                            </span>
+
+                        </button>
+
+                        <span class="text-light">Don't have an account? <a class="roboto text-danger manga-title" style="cursor: pointer;" ng-click="redirectToRegister()">Sign Up</a></span>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
